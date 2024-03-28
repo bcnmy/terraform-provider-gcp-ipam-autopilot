@@ -16,9 +16,10 @@ builds:
   ldflags:
     - '-s -w -X main.version={{.Version}} -X main.commit={{.Commit}}'
   goos:
-    - freebsd
+   - freebsd
     - linux
-    - darwin
+    # fails to compile darwin
+    # - darwin
     # fails to compile windows_arm64
     # - windows
   goarch:
