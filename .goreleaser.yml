@@ -17,9 +17,10 @@ builds:
     - '-s -w -X main.version={{.Version}} -X main.commit={{.Commit}}'
   goos:
     - freebsd
-    - windows
     - linux
     - darwin
+    # fails to compile windows_arm64
+    # - windows
   goarch:
     - amd64
     - '386'
